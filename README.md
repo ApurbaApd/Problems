@@ -6,3 +6,5 @@
 [Fibonacci Finding](https://www.hackerrank.com/challenges/fibonacci-finding-easy/problem)
 
 [Micro and Prime Prime](https://www.hackerearth.com/practice/math/number-theory/primality-tests/practice-problems/algorithm/micro-and-prime-prime-1/)
+
+[TDKPRIME - Finding the Kth Prime](https://www.spoj.com/problems/TDKPRIME/)
