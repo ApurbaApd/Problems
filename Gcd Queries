@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+#define REP(i, n) for(int i=1; i<=n; i++)
+
+
+int pre[100005], suff[100005];
+int arr[100001];
+
+int gcd(int a, int b){
+   
+   if(b==0) return a;
+   else
+   	return gcd(b, a%b);
+
+}
+
+int main(){
+  
+  int t, q, n, l, r;//n->number of elements//q->query
+  cin>>t;
+
+  while(t--){
+     
+     cin>>n>>q;
+
+     REP(i, n) cin>>arr[i];
+
+     pre[0] = suff[n+1] = 0;
+
+    //prefix array
+     REP(i,n) pre[i] = gcd(pre[i-1],arr[i]);
+
+     //suffix array
+     for(int i=n; i>=1;i--)
+        suff[i] = gcd(arr[i], suff[i+1]);
+
+    while(q--){
+
+     cin>>l>>r;
+     cout<<gcd(pre[l-1],suff[r+1])<<endl;
+
+    }
+    
+
+  }
+
+
+}
